@@ -56,12 +56,12 @@ border: 4px solid var(--white);
 
 .logo img{width:100%;height:100%;object-fit:cover;}
 
-/* สำหรับรูปภาพเรตราค่า */
-.price-rate-image {
+.full-img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
+    display: block;
 }
 
 .badges{
@@ -149,7 +149,6 @@ font-size:13px;
 font-weight: 500;
 }
 
-/* มุมผลงานเฉพาะ (Portfolio) */
 .port-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -163,15 +162,12 @@ font-weight: 500;
     border-radius: 15px;
     padding: 12px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.port-card:hover {
-    transform: translateY(-3px);
 }
 
 .port-card img {
     width: 100%;
+    height: 100px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 8px;
 }
@@ -247,58 +243,56 @@ border: 1px solid var(--main);
 <div class="container">
 
 <div class="section center" style="border:none;box-shadow:none;background:transparent;">
+    <div class="logo">
+        <img src="logo.jpg" alt="Gin Shopz Logo">
+    </div>
 
-<div class="logo">
-<img src="logo.jpg" alt="Gin Shopz Logo">
-</div>
+    <h1>Gin Shopz</h1>
+    <p style="color:var(--dark); font-weight: 500; margin:10px 0 5px;">
+    ✨ ร้านจิน รับทำเว็บบอกรายละเอียดน้า ✨
+    </p>
+    <p style="color:#777; font-size: 13px; margin-bottom: 20px;">
+    รับออกแบบเว็บไซต์แสดงข้อมูล และเว็บอื่นๆ ตามใจสั่ง 💕🌷
+    </p>
 
-<h1>Gin Shopz</h1>
-<p style="color:var(--dark); font-weight: 500; margin:10px 0 5px;">
-✨ ร้านจิน รับทำเว็บบอกรายละเอียดน้า ✨
-</p>
-<p style="color:#777; font-size: 13px; margin-bottom: 20px;">
-รับออกแบบเว็บไซต์แสดงข้อมูล และเว็บอื่นๆ ตามใจสั่ง 💕🌷
-</p>
+    <div class="badges">
+        <div class="badge">🌐 เว็บบอกรายละเอียด</div>
+        <div class="badge">🎨 เว็บรับทำป้าย</div>
+        <div class="badge">✅ งานไว</div>
+        <div class="badge">💖 ใส่ใจทุกบรีฟ</div>
+    </div>
 
-<div class="badges">
-    <div class="badge">🌐 เว็บบอกรายละเอียด</div>
-    <div class="badge">🎨 เว็บรับทำป้าย</div>
-    <div class="badge">✅ งานไว</div>
-    <div class="badge">💖 ใส่ใจทุกบรีฟ</div>
-</div>
-
-<a href="https://ginger36.github.io/kataiy/" class="btn btn-outline">
-🔎 เช็คคิวงาน & สถานะปัจจุบัน ✨
-</a>
+    <a href="https://ginger36.github.io/kataiy/" class="btn btn-outline">
+    🔎 เช็คคิวงาน & สถานะปัจจุบัน ✨
+    </a>
 </div>
 
 <div class="section">
     <h2 style="font-size: 1.3rem; display: flex; align-items: center; gap: 8px;">
         <span>💰</span> เรตราค่าบริการ
     </h2>
-    <img src="price-rate.png" alt="เรตราค่าบริการ Gin Shopz" class="price-rate-image"> <p style="font-size: 12px; color: #888; text-align: center;">*ราคาอาจมีการเปลี่ยนแปลงตามความยากง่ายของงานจริง</p>
+    <img src="rate-price.png" alt="เรตราค่าบริการ" class="full-img"> 
+    <p style="font-size: 12px; color: #888; text-align: center;">*ราคาอาจมีการเปลี่ยนแปลงตามความยากง่ายและจำนวนบรรทัด</p>
 </div>
 
 <div class="section">
     <h2 style="font-size: 1.3rem; display: flex; align-items: center; gap: 8px;">
         <span>⭐️</span> มุมผลงานเฉพาะ
     </h2>
-    <p style="font-size: 12px; color: #888; margin-bottom: 15px;">คลิกเพื่อเข้าชมตัวอย่างเว็บไซต์แต่ละสไตล์</p>
+    <p style="font-size: 12px; color: #888; margin-bottom: 15px;">ตัวอย่างเว็บไซต์แต่ละสไตล์จากทางร้าน</p>
     
     <div class="port-grid">
         <div class="port-card">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://ginger36.github.io/kataiy/" alt="Demo 1" style="opacity: 0.5; background: #eee;">
+            <img src="demo-work.png" alt="Kataiy Style">
             <span>Kataiy Style</span>
             <a href="https://ginger36.github.io/kataiy/" class="btn btn-main btn-sm">เข้าชมงาน</a>
         </div>
         <div class="port-card">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://ginger36.github.io/meowlinstore/" alt="Demo 2" style="opacity: 0.5; background: #eee;">
+            <img src="demo-work-2.png" alt="Meowlin Store">
             <span>Meowlin Store</span>
             <a href="https://ginger36.github.io/meowlinstore/" class="btn btn-main btn-sm">เข้าชมงาน</a>
         </div>
     </div>
-
-    <a href="https://ginger36.github.io/kataiy/" class="btn btn-outline" style="font-size: 13px; padding: 10px;">ดูผลงานทั้งหมดผ่าน GitHub 📂</a>
 </div>
 
 <div class="section">
